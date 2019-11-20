@@ -1,6 +1,10 @@
 ## README
 
-A simple bash script to extract FASTA sequences using sequence ids.
+A simple bash script to extract FASTA sequences using sequence ids. This works in linux files where newlines are '\n'. If you have generated the fasta files in MacOS, you will have '^M' as new line and this will mess up. Before you run this script, replace the '^M' by '\n' using the following example command:
+
+```
+bash fastafile | tr '\r' ' ' | sed 's/ //g' > output.fasta 
+```
 
 ## How to use
 
